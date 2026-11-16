@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101827" />
+    <meta name="description" content="A simple, modern website for CTITHEAD." />
+    <title>CTITHEAD — Ideas into impact</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #101827;
+        --surface: #172235;
+        --text: #f4f7fb;
+        --muted: #aab7ca;
+        --accent: #76e4c4;
+        --blue: #8daeff;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--text);
+        background: radial-gradient(ellipse at 75% 15%, #243759 0, transparent 38%), var(--bg);
+        line-height: 1.6;
+      }
+      a { color: inherit; text-decoration: none; }
+      .wrap { width: min(1080px, calc(100% - 40px)); margin: auto; }
+      header { border-bottom: 1px solid #ffffff16; }
+      nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+      .brand { font-size: 1.15rem; font-weight: 800; letter-spacing: .08em; }
+      .brand span { color: var(--accent); }
+      .nav-links { display: flex; gap: 26px; color: var(--muted); font-size: .95rem; }
+      .nav-links a:hover { color: var(--text); }
+      .button { display: inline-flex; align-items: center; justify-content: center; padding: 12px 19px; border-radius: 999px; background: var(--accent); color: #10211e; font-weight: 750; transition: transform .2s, filter .2s; }
+      .button:hover { transform: translateY(-2px); filter: brightness(1.05); }
+      .hero { padding: 104px 0 90px; }
+      .hero-content { max-width: 720px; }
+      .tag { display: inline-block; padding: 6px 12px; border: 1px solid #76e4c455; border-radius: 999px; color: var(--accent); font-size: .82rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+      h1 { margin: 20px 0 16px; max-width: 700px; font-size: clamp(2.8rem, 8vw, 5.7rem); line-height: 1.02; letter-spacing: -.055em; }
+      h1 span { color: var(--accent); }
+      .intro { max-width: 590px; color: var(--muted); font-size: clamp(1.05rem, 2.2vw, 1.2rem); }
+      .hero-actions { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; margin-top: 28px; }
+      .text-link { color: var(--muted); }
+      .text-link:hover { color: var(--text); }
+      section { padding: 68px 0; }
+      .section-heading { max-width: 600px; margin-bottom: 30px; }
+      .section-heading h2 { margin: 0 0 8px; font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: -.03em; }
+      .section-heading p { margin: 0; color: var(--muted); }
+      .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+      .card { padding: 25px; border: 1px solid #ffffff12; border-radius: 18px; background: #172235bd; }
+      .icon { width: 44px; height: 44px; display: grid; place-items: center; margin-bottom: 18px; border-radius: 13px; background: #8daeff20; color: var(--blue); font-size: 1.25rem; }
+      .card h3 { margin: 0 0 8px; font-size: 1.12rem; }
+      .card p { margin: 0; color: var(--muted); font-size: .96rem; }
+      .contact { padding: 40px; display: flex; justify-content: space-between; align-items: center; gap: 24px; border: 1px solid #ffffff16; border-radius: 22px; background: linear-gradient(120deg, #1a2c41, #172235); }
+      .contact h2 { margin: 0 0 5px; font-size: clamp(1.6rem, 4vw, 2.3rem); }
+      .contact p { margin: 0; color: var(--muted); }
+      footer { padding: 28px 0; color: var(--muted); font-size: .9rem; }
+      .footer-row { display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid #ffffff16; padding-top: 22px; }
+      @media (max-width: 700px) {
+        .hero { padding: 78px 0 62px; }
+        .nav-links { gap: 14px; font-size: .88rem; }
+        .nav-cta { display: none; }
+        .cards { grid-template-columns: 1fr; }
+        .contact { padding: 28px; align-items: flex-start; flex-direction: column; }
+      }
+      @media (max-width: 430px) {
+        .wrap { width: min(100% - 28px, 1080px); }
+        .nav-links { gap: 10px; }
+        .footer-row { flex-direction: column; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="wrap" aria-label="Main navigation">
+        <a class="brand" href="#home">CTIT<span>HEAD</span></a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a class="button nav-cta" href="#contact">Let’s talk</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="wrap hero-content">
+          <span class="tag">Welcome to CTITHEAD</span>
+          <h1>Good ideas deserve to make <span>an impact.</span></h1>
+          <p class="intro">A simple space for sharing what we do, what we believe, and how we can help turn your next idea into something real.</p>
+          <div class="hero-actions">
+            <a class="button" href="#about">Discover more</a>
+            <a class="text-link" href="#services">Explore what we do <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="wrap">
+          <div class="section-heading">
+            <h2>Thoughtful work. Made simple.</h2>
+            <p>We bring clear thinking and creative energy to every project, helping people move from an idea to a meaningful result.</p>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <div class="icon" aria-hidden="true">✦</div>
+              <h3>Start with clarity</h3>
+              <p>We focus on what matters, so every step has a purpose and a clear direction.</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true">◈</div>
+              <h3>Make it useful</h3>
+              <p>Good design and thoughtful solutions should make everyday things work better.</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true">↗</div>
+              <h3>Keep moving forward</h3>
+              <p>We build, learn, and improve—creating work that’s ready for what comes next.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="wrap">
+          <div class="section-heading">
+            <h2>How we can help</h2>
+            <p>Flexible support to help you take the next step with confidence.</p>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <div class="icon" aria-hidden="true">⌘</div>
+              <h3>Ideas & strategy</h3>
+              <p>Shape a strong starting point with clear goals and a practical plan.</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true">✎</div>
+              <h3>Design & creation</h3>
+              <p>Bring your vision to life with polished, approachable digital experiences.</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true">◎</div>
+              <h3>Ongoing support</h3>
+              <p>Keep improving your work with helpful guidance as your needs grow.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="wrap">
+          <div class="contact">
+            <div>
+              <h2>Have an idea in mind?</h2>
+              <p>We’d love to hear what you’re working on.</p>
+            </div>
+            <a class="button" href="mailto:hello@ctithead.com">Get in touch</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap footer-row">
+        <span>© <span id="year"></span> CTITHEAD. All rights reserved.</span>
+        <a href="#home">Back to top ↑</a>
+      </div>
+    </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
